@@ -13,7 +13,8 @@ class EmployerController extends Controller
      */
     public function index()
     {
-        //
+        
+
     }
 
     /**

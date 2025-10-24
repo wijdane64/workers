@@ -6,6 +6,12 @@
     <title>WorkUnity</title>
 </head>
 <body>
+  <nav class="bg-red-500 p-4 text-white flex justify-between ">
+    
+    <a href="{{ route('employé.index') }}">Employés</a>
+    
+    
+  </nav=class>
   <table>
     <tr>
     <th>nom</th>
@@ -15,4 +21,7 @@
   </tr>
   </table>  
 </body>
+<footer class="footer">
+  <p>© 2024 WorkUnity. All rights reserved.</p>
+</footer>
 </html>
