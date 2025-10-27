@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\EmployerController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,10 +13,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('/employé', function () {
-    return view('employé');
-})->name('employé.index');
 
+Route::get('/', function() {
+    return redirect()->route('employer.index');
+});
+
+// CRUD routes pour les employés
+// Route::get('/employers', [EmployerController::class, 'index'])->name('employer.index');
+// Route::get('/employers/create', [EmployerController::class, 'create'])->name('employer.create');
+// Route::post('/employers', [EmployerController::class, 'store'])->name('employer.store');
+// Route::get('/employers/{employer}', [EmployerController::class, 'show'])->name('employer.show');
+// Route::get('/employers/{employer}/edit', [EmployerController::class, 'edit'])->name('employer.edit');
+// Route::put('/employers/{employer}', [EmployerController::class, 'update'])->name('employer.update');
+// Route::delete('/employers/{employer}', [EmployerController::class, 'destroy'])->name('employer.destroy');
+Route::resource('employer', EmployerController::class);
